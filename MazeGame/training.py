@@ -32,7 +32,7 @@ if not os.path.exists('model.h5'):
     model.add(Dense(4)) # num of actions
     model.compile(optimizer='adam', loss='mse')
 
-    model = qtrain(model, maze, n_epoch=1000, max_memory=8*maze.size, data_size=32, visualize = True)
+    model = qtrain(model, maze, n_epoch=1000, max_memory=8*maze.size, data_size=32, visualize = False)
     # Save the model
     model.save('model.h5')
 else:
