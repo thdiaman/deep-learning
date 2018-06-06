@@ -73,6 +73,7 @@ else:
     # Load the model from disk
     model = load_model('rnn_model.h5')
 
+model.summary()
 score = model.evaluate([tx, txq], ty, batch_size=BATCH_SIZE, verbose=0)
 print('Test loss:', score[0])
 print('Test accuracy:', score[1])
