@@ -14,14 +14,14 @@ After checking that you meet all the prerequisites, you can
 Typically, you should be able to run this tutorial on any python 3 distribution that
 includes numpy, scipy, scikit-learn, matplotlib and Keras (with tensorflow backend).
 However, you are strongly advised to use one of the following two pre-bundled python
-distributions ([Anaconda](https://anaconda.org/anaconda/python) or
-[WinPython](https://sourceforge.net/projects/winpython/files/WinPython_3.6/3.6.5.0/))
-that include most required python packages.
+distributions that include most required python packages.
 
 ### Option 1: Use Anaconda
-Anaconda has most of the required packages and is available for Windows, Linux, or Mac OS.
-To install Anaconda on your OS, you have to download the respective 
-installer from its [downloads page](https://www.anaconda.com/download/)
+[Anaconda](https://anaconda.org/anaconda) has most of the required packages
+and is available for Windows, Linux, or Mac OS.
+To install Anaconda on your OS, you have to download the respective installer
+(Python 3.6 version, either 64-bit or 32-bit according to your OS) from its
+[downloads page](https://www.anaconda.com/download/).
 
 After installing Anaconda, you have to open the Anaconda Prompt and install Keras by
 typing in:
@@ -33,7 +33,7 @@ conda install keras
 AFter confirming the changes that are recommended, Keras will be installed.
 
 ### Option 2: Use WinPython (Windows only)
-WinPython is an even better option as it has also preinstalled Keras. However, it only
+[WinPython](http://winpython.sourceforge.net/) is an even better option as it has also preinstalled Keras. However, it only
 works for Windows. If you want to use WinPython you can download the
 version 3.6.3.0 of WinPython with QT5, which is available
 [here](https://sourceforge.net/projects/winpython/files/WinPython_3.6/3.6.3.0/WinPython-64bit-3.6.3.0Qt5.exe) for 64-bit OSes
