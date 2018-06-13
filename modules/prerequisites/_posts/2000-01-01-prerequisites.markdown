@@ -20,7 +20,7 @@ distributions that include most required python packages.
 [Anaconda](https://anaconda.org/anaconda) has most of the required packages
 and is available for Windows, Linux, or Mac OS.
 To install Anaconda on your OS, you have to download the respective installer
-(Python 3.6 version, either 64-bit or 32-bit according to your OS) from its
+(Anaconda version 5.2, python version 3.6, either 64-bit or 32-bit according to your OS) from its
 [downloads page](https://www.anaconda.com/download/).
 
 After installing Anaconda, you have to open the Anaconda Prompt and install Keras by
