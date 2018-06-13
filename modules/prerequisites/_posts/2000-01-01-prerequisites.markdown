@@ -11,18 +11,31 @@ After checking that you meet all the prerequisites, you can
 </div>
 
 ## Software Prerequisites
-You are going to need a solid python distribution, on top of which to install numpy, scipy,
-scikit-learn, matplotlib, and after that you can install Keras by running:
+Typically, you should be able to run this tutorial on any python 3 distribution that
+includes numpy, scipy, scikit-learn, matplotlib and Keras (with tensorflow backend).
+However, you are strongly advised to use one of the following two pre-bundled python
+distributions ([Anaconda](https://anaconda.org/anaconda/python) or
+[WinPython](https://sourceforge.net/projects/winpython/files/WinPython_3.6/3.6.5.0/))
+that include most required python packages.
+
+### Option 1: Use Anaconda
+Anaconda has most of the required packages and is available for Windows, Linux, or Mac OS.
+To install Anaconda on your OS, you have to download the respective 
+installer from its [downloads page](https://www.anaconda.com/download/)
+
+After installing Anaconda, you have to open the Anaconda Prompt and install Keras by
+typing in:
 
 ```
-pip install keras
+conda install keras
 ```
 
-To avoid any messes, you are definitely recommended to install one of the pre-bundled
-python distribitions, such as [WinPython](https://sourceforge.net/projects/winpython/files/WinPython_3.6/3.6.5.0/)
-or [Anaconda](https://anaconda.org/anaconda/python)
+AFter confirming the changes that are recommended, Keras will be installed.
 
-I test everything on the version 3.6.3.0 of WinPython with QT5, available
+### Option 2: Use WinPython (Windows only)
+WinPython is an even better option as it has also preinstalled Keras. However, it only
+works for Windows. If you want to use WinPython you can download the
+version 3.6.3.0 of WinPython with QT5, which is available
 [here](https://sourceforge.net/projects/winpython/files/WinPython_3.6/3.6.3.0/WinPython-64bit-3.6.3.0Qt5.exe) for 64-bit OSes
 and [here](https://sourceforge.net/projects/winpython/files/WinPython_3.6/3.6.3.0/WinPython-32bit-3.6.3.0Qt5.exe/download) for
 32-bit OSes.
