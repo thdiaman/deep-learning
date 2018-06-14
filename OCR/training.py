@@ -15,6 +15,17 @@ x_train, y_train = f['x_train'], f['y_train']
 x_test, y_test = f['x_test'], f['y_test']
 f.close()
 
+# Optionally plot some images
+#import matplotlib.pyplot as plt
+#fig = plt.figure()
+#for i in range(9):
+#  plt.subplot(3,3,i+1)
+#  plt.tight_layout()
+#  plt.imshow(x_train[i], cmap='gray', interpolation='none')
+#  plt.title("Digit: {}".format(y_train[i]))
+#  plt.xticks([])
+#  plt.yticks([])
+
 # Reshape from (num_samples, 28, 28) to (num_samples, 784)
 x_train = x_train.reshape(x_train.shape[0], 784)
 x_test = x_test.reshape(x_test.shape[0], 784)
