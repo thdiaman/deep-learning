@@ -47,5 +47,13 @@ Try this before you check the solution
 (<a target="_blank" href="{{site.dataurl}}/TextClassificationMultiClass/training.py">training</a>,
 <a target="_blank" href="{{site.dataurl}}/TextClassificationMultiClass/model.h5">trained model</a> and
 <a target="_blank" href="{{site.dataurl}}/TextClassificationMultiClass/dictionary.json">vocabulary</a>, and
-<a target="_blank" href="{{site.dataurl}}/TextClassificationMultiClass/testing.py">testing</a>).
+<a target="_blank" href="{{site.dataurl}}/TextClassificationMultiClass/testing.py">testing</a>)
+and the CNN solution
+(<a target="_blank" href="{{site.dataurl}}/TextClassificationMultiClass/training_cnn.py">training</a>,
+<a target="_blank" href="{{site.dataurl}}/TextClassificationMultiClass/cnn_model.h5">trained model</a>, and
+<a target="_blank" href="{{site.dataurl}}/TextClassificationMultiClass/testing_cnn_lstm.py">testing</a>)
+and the LSTM solution
+(<a target="_blank" href="{{site.dataurl}}/TextClassificationMultiClass/training_lstm.py">training</a>,
+<a target="_blank" href="{{site.dataurl}}/TextClassificationMultiClass/lstm_model.h5">trained model</a>, and
+<a target="_blank" href="{{site.dataurl}}/TextClassificationMultiClass/testing_cnn_lstm.py">testing</a>).
 
