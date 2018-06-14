@@ -64,5 +64,5 @@ def classify_image(image_path, plot = True):
 
     return predictedvalue
 
-#run_on_test_set('data/test')
+run_on_test_set('data/test')
 classify_image('data/test/dogs/dog.1440.jpg')
