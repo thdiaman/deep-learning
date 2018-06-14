@@ -30,10 +30,9 @@ input_shape = (img_width, img_height, 3)
 def run_on_test_set(test_set_path):
     test_datagen = ImageDataGenerator(rescale=1. / 255)
     if not os.path.exists('bottleneck_features_test.npy'):
-        test_generator = test_datagen.flow_from_directory(test_set_path, shuffle=False,
-            target_size=(img_width, img_height), batch_size=batch_size, class_mode=None)
-        bottleneck_features_test = vgg_model.predict_generator(test_generator,
-            nb_test_samples // batch_size, verbose = 1)
+        test_generator = test_datagen.flow_from_directory(test_set_path,
+            shuffle=False, target_size=(img_width, img_height), batch_size=batch_size, class_mode=None)
+        bottleneck_features_test = vgg_model.predict_generator(test_generator, nb_test_samples // batch_size, verbose = 1)
         np.save(open('bottleneck_features_test.npy', 'wb'), bottleneck_features_test)
     else:
         bottleneck_features_test = np.load(open('bottleneck_features_test.npy', 'rb'))

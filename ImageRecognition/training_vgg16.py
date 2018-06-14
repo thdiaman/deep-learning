@@ -34,8 +34,8 @@ if not os.path.exists('bottleneck_features_train.npy'):
     np.save(open('bottleneck_features_train.npy', 'wb'), bottleneck_features_train)
 
 if not os.path.exists('bottleneck_features_validation.npy'):
-    generator = datagen.flow_from_directory(validation_data_dir, shuffle=False,
-        target_size=(img_width, img_height), batch_size=batch_size, class_mode=None)
+    generator = datagen.flow_from_directory(validation_data_dir,
+        shuffle=False, target_size=(img_width, img_height), batch_size=batch_size, class_mode=None)
     bottleneck_features_validation = model.predict_generator(generator,
         nb_validation_samples // batch_size, verbose = 1)
     np.save(open('bottleneck_features_validation.npy', 'wb'), bottleneck_features_validation)
@@ -56,11 +56,11 @@ if not os.path.exists('bottleneck_fc_model.h5'):
     model.add(Dropout(0.5))
     model.add(Dense(1, activation='sigmoid'))
 
-    model.compile(optimizer='rmsprop', loss='binary_crossentropy', metrics=['accuracy'])
+    model.compile(optimizer='rmsprop', loss='binary_crossentropy', metrics = ['accuracy'])
 
     # Train the model
     model.fit(train_data, train_labels, epochs=epochs, batch_size=batch_size,
-              verbose=1, validation_data=(validation_data, validation_labels))
+             verbose=1, validation_data=(validation_data, validation_labels))
 
     # Save the model
     model.save('bottleneck_fc_model.h5')

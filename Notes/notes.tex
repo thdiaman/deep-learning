@@ -1,14 +1,14 @@
 \documentclass[10pt,twoside,a4paper,openany]{memoir}
 
-\setlrmarginsandblock{2.8cm}{2.8cm}{*}
-\setulmarginsandblock{2.8cm}{2.8cm}{*}
+\setlrmarginsandblock{2.35cm}{2.35cm}{*}
+\setulmarginsandblock{2.35cm}{2.35cm}{*}
 \renewcommand{\baselinestretch}{1.05}
 \checkandfixthelayout
 
 \makechapterstyle{box}{
   \renewcommand*{\printchaptername}{}
   \renewcommand*{\printchapternum}{}
-  \renewcommand*{\printchaptertitle}[1]{\chaptitlefont\thechapter.\ ##1}
+  \renewcommand*{\printchaptertitle}[1]{\vspace{-2.5cm}\chaptitlefont\thechapter.\ ##1\vspace{-1cm}}
 }
 \chapterstyle{box}
 
@@ -133,45 +133,71 @@ COPYRIGHT 2018
 \chapter{Optical Character Recognition}
 
 \section{Solution using Fully Connected Neural Network}
+\subsection{Training}
 \lstinputlisting{../OCR/training.py}
 
+\subsection{Testing}
+\lstinputlisting{../OCR/testing_metrics.py}
+
 \section{Solution using Convolutional Neural Network}
+\subsection{Training}
 \lstinputlisting{../OCR/training_cnn.py}
+
+\subsection{Testing}
+\lstinputlisting{../OCR/testing_metrics_cnn.py}
 
 \chapter{Image Recognition}
 
 \section{Solution using Convolutional Neural Network}
-%\subsection{Training}
+\subsection{Training}
 \lstinputlisting{../ImageRecognition/training.py}
 
-%\subsection{Testing}
-%\lstinputlisting{../ImageRecognition/testing.py}
+\subsection{Testing}
+\lstinputlisting{../ImageRecognition/testing.py}
 
 \section{Solution using Bottleneck Features on VGG16}
-%\subsection{Training}
+\subsection{Training}
 \lstinputlisting{../ImageRecognition/training_vgg16.py}
 
-%\subsection{Testing}
-%\lstinputlisting{../ImageRecognition/testing_vgg16.py}
+\subsection{Testing}
+\lstinputlisting{../ImageRecognition/testing_vgg16.py}
 
 \chapter{Text Classification}
 \section{Solution using Fully Connected Neural Network}
+\subsection{Training}
 \lstinputlisting{../TextClassification/training.py}
 
+\subsection{Testing}
+\lstinputlisting{../TextClassification/testing.py}
+
+\newpage
 \section{Solution using Convolutional Neural Network}
+\subsection{Training}
 \lstinputlisting{../TextClassification/training_cnn.py}
 
+\subsection{Testing}
+\lstinputlisting{../TextClassification/testing_cnn_lstm.py}
+
 \section{Solution using Recurrent Neural Network}
+\subsection{Training}
 \lstinputlisting{../TextClassification/training_lstm.py}
+
+\subsection{Testing}
+Same as Testing for Solution using Convolutional Neural Network
 
 \chapter{Text Generation}
 \section{Solution using Recurrent Neural Network}
+\subsection{Training}
 \lstinputlisting{../TextGeneration/training_rnn.py}
+
+\subsection{Testing}
+\lstinputlisting{../TextGeneration/testing_rnn.py}
 
 \chapter{Game Playing}
 \section{Catch}
 \lstinputlisting{../CatchGame/training.py}
 
+\newpage
 \section{Maze}
 \lstinputlisting{../MazeGame/training.py}
 
