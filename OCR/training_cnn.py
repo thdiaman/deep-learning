@@ -1,18 +1,10 @@
-'''
-Train a convolutional NN (CNN) on the MNIST dataset.
-'''
-
 # Import basic libraries and keras
 import os
-import numpy as np
-
-from keras.utils import np_utils
-from keras.models import Sequential
-from keras.layers import Dense, Dropout, Activation, Flatten, Convolution2D, MaxPooling2D
-
 import keras
+import numpy as np
+from keras.utils import np_utils
 from keras.models import Sequential, load_model
-from keras.layers import Dense, Dropout
+from keras.layers import Dense, Dropout, Activation, Flatten, Convolution2D, MaxPooling2D
 
 # Read the MNIST data and split to train and test
 f = np.load('mnist.npz')
@@ -65,6 +57,7 @@ else:
     # Load the model from disk
     model = load_model('cnn_model.h5')
 
+# Get loss and accuracy on validation set
 score = model.evaluate(x_test, y_test, verbose=0)
 print('Test loss:', score[0])
 print('Test accuracy:', score[1])

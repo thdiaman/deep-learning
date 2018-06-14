@@ -23,11 +23,8 @@ except:
     vgg_model.save("vgg16_pretrained_imagenet.h5")
 model = load_model('bottleneck_fc_model.h5')
 
-# Use the image data format of Keras
-if K.image_data_format() == 'channels_first':
-    input_shape = (3, img_width, img_height)
-else:
-    input_shape = (img_width, img_height, 3)
+# Use the image data format of Tensorflow
+input_shape = (img_width, img_height, 3)
 
 # Run on test set
 def run_on_test_set(test_set_path):

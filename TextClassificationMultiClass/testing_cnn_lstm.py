@@ -5,10 +5,12 @@ from keras.models import load_model
 from keras.preprocessing.text import Tokenizer
 from keras.preprocessing.sequence import pad_sequences
 
+# Load the model, either 'cnn_model.h5' or 'lstm_model.h5'
+model = load_model('cnn_model.h5')
+
 # Load the dictionary and the model
 with open('dictionary.json', 'r') as dictionary_file:
     dictionary = json.load(dictionary_file)
-model = load_model('cnn_model.h5')
 
 classes = ['business', 'entertainment', 'politics', 'sport', 'tech']
 

@@ -1,8 +1,10 @@
+# Import basic libraries and keras
 import numpy as np
 import tkinter as tk
 from PIL import Image, ImageDraw
 from keras.models import load_model
 
+# Load the model
 model = load_model('model.h5')
 
 def evaluate():

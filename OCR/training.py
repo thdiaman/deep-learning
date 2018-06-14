@@ -1,13 +1,9 @@
-'''
-Train a simple deep NN (MLP) on the MNIST dataset.
-'''
-
 # Import basic libraries and keras
 import os
-import numpy as np
 import keras
-from keras.models import Sequential, load_model
+import numpy as np
 from keras.layers import Dense, Dropout
+from keras.models import Sequential, load_model
 
 # Read the MNIST data and split to train and test
 f = np.load('mnist.npz')
@@ -67,6 +63,7 @@ else:
     # Load the model from disk
     model = load_model('model.h5')
 
+# Get loss and accuracy on validation set
 score = model.evaluate(x_test, y_test, verbose=0)
 print('Test loss:', score[0])
 print('Test accuracy:', score[1])

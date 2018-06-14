@@ -22,8 +22,9 @@ tokenizer = Tokenizer(num_words=max_words)
 tokenizer.fit_on_texts(train_x)
 dictionary = tokenizer.word_index
 # Save tokenizer dictionary to file
-with open('dictionary.json', 'w') as outfile:
-    json.dump(tokenizer.word_index, outfile)
+if not os.path.exists('dictionary.json'):
+    with open('dictionary.json', 'w') as outfile:
+        json.dump(tokenizer.word_index, outfile)
 
 # For each tweet, change each token to its ID in the Tokenizer's word_index
 sequences = tokenizer.texts_to_sequences(train_x)

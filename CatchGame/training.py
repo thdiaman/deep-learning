@@ -24,7 +24,7 @@ if not os.path.exists('model.h5'):
     model.compile(sgd(lr=.1), "mse")
     model.summary()
     
-    # Train model
+    # Train by playing the game - change visualize to True to also visualize the training
     env = Catch(grid_size)
     epochs = 5000
     model = train(model, epochs, env, max_memory, batch_size, verbose=1, visualize=False)
@@ -35,6 +35,6 @@ else:
     # Load the model from disk
     model = load_model('model.h5')
 
-# Define environment, game
+# Play game
 env = Catch(grid_size)
 test(model, env)

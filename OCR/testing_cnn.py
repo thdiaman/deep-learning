@@ -1,3 +1,4 @@
+# Import basic libraries and keras
 import numpy as np
 import tkinter as tk
 from PIL import Image, ImageDraw
@@ -11,8 +12,7 @@ def evaluate():
     for i in range(img.size[0]):
         for j in range(img.size[1]):
             pixels[i,j] = 255 if pixels[i,j] == 0 else 0
-    X_test = np.array(img)
-    X_test = X_test.reshape(1, 28, 28, 1)
+    X_test = np.array(img).reshape(1, 28, 28, 1)
     predicted_classes = model.predict_classes(X_test, verbose=0)
     reslabel['text'] = "The drawn number is " + str(predicted_classes[0])
 

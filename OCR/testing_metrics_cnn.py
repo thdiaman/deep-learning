@@ -3,7 +3,7 @@ import numpy as np
 from keras.models import load_model
 
 # Load the model
-model = load_model('model.h5')
+model = load_model('cnn_model.h5')
 
 # Read the MNIST data and get test
 f = np.load('mnist.npz')
@@ -11,7 +11,7 @@ x_test, y_test = f['x_test'], f['y_test']
 f.close()
 
 # Process the images as in training
-x_test = x_test.reshape(x_test.shape[0], 784)
+x_test = x_test.reshape(x_test.shape[0], 28, 28, 1)
 x_test = x_test.astype('float32')
 x_test /= 255
 

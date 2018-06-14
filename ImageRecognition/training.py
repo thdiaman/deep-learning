@@ -15,11 +15,8 @@ nb_validation_samples = 800
 epochs = 50
 batch_size = 16
 
-# Use the image data format of Keras
-if K.image_data_format() == 'channels_first':
-    input_shape = (3, img_width, img_height)
-else:
-    input_shape = (img_width, img_height, 3)
+# Use the image data format of Tensorflow
+input_shape = (img_width, img_height, 3)
 
 # Check if there is a pre-trained model
 if not os.path.exists('model.h5'):
