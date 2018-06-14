@@ -33,10 +33,12 @@ story_maxlen = max(map(len, (x for x, _, _ in train + test)))
 query_maxlen = max(map(len, (x for _, x, _ in train + test)))
 
 # Save vocabulary and lengths to file
-with open('dictionary.json', 'w') as outfile:
-    json.dump(word_idx, outfile)
-with open('lengths.json', 'w') as outfile:
-    json.dump({'story_maxlen': story_maxlen, 'query_maxlen': query_maxlen}, outfile)
+if not os.path.exists('dictionary.json'):
+    with open('dictionary.json', 'w') as outfile:
+        json.dump(word_idx, outfile)
+if not os.path.exists('lengths.json'):
+    with open('lengths.json', 'w') as outfile:
+        json.dump({'story_maxlen': story_maxlen, 'query_maxlen': query_maxlen}, outfile)
 
 # Vectorize the stories
 x, xq, y = vectorize_stories(train, word_idx, story_maxlen, query_maxlen)
