@@ -8,7 +8,8 @@ def load_data(data_path = 'bbc'):
         path = os.path.join(data_path, aclass)
         for atext in os.listdir(path):
             with open(os.path.join(path, atext)) as infile:
-                texts.append(infile.read())
+                data = infile.readlines()
+                texts.append(data[0])
                 labels.append(i)
     return texts, labels
 

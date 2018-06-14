@@ -46,7 +46,7 @@ if not os.path.exists('model.h5'):
     model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
     
     # Train the model
-    model.fit(train_x, train_y, batch_size=32, epochs=5, verbose=1, validation_split=0.1, shuffle=True)
+    model.fit(train_x, train_y, batch_size=32, epochs=10, verbose=1, validation_split=0.1, shuffle=True)
 
     # Save the model
     model.save('model.h5')
