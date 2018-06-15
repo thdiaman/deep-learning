@@ -1,0 +1,195 @@
+\documentclass[10pt,twoside,a4paper,openany]{memoir}
+
+\setlrmarginsandblock{2.35cm}{2.35cm}{*}
+\setulmarginsandblock{2.35cm}{2.35cm}{*}
+\renewcommand{\baselinestretch}{1.05}
+\checkandfixthelayout
+
+\makechapterstyle{box}{
+  \renewcommand*{\printchaptername}{}
+  \renewcommand*{\printchapternum}{}
+  \renewcommand*{\printchaptertitle}[1]{\vspace{-2.5cm}\chaptitlefont\thechapter.\ ##1\vspace{-1cm}}
+}
+\chapterstyle{box}
+
+\setsecnumdepth{subsubsection}
+
+\usepackage{graphicx}
+
+\usepackage{listings}
+
+
+% Default fixed font does not support bold face
+\DeclareFixedFont{\ttb}{T1}{txtt}{bx}{n}{9.5} % for bold
+\DeclareFixedFont{\ttm}{T1}{txtt}{m}{n}{10}  % for normal
+
+% Custom colors
+\usepackage{color}
+\definecolor{deepblue}{rgb}{0,0,0.5}
+\definecolor{deepred}{rgb}{0.6,0,0}
+\definecolor{deepgreen}{rgb}{0,0.5,0}
+\lstset{
+language=Python,
+basicstyle=\ttm,
+otherkeywords={self},             % Add keywords here
+keywordstyle=\ttb\color{deepblue},
+emph={MyClass,__init__},          % Custom highlighting
+emphstyle=\ttb\color{deepred},    % Custom highlighting style
+stringstyle=\color{deepgreen},
+frame=tb,                         % Any extra options here
+showstringspaces=false,
+breaklines=true
+%basicstyle=\small%\linespread{1.15}\sffamily
+}
+
+\usepackage[hidelinks,bookmarksopen=true,bookmarksopenlevel=-1]{hyperref}
+
+\usepackage{qrcode}
+
+\let\cleardoublepage\clearpage
+
+\makeatletter
+\def\maketitle{%
+  \null
+  \thispagestyle{empty}%
+  \vfill
+
+  \begin{center}
+    \normalfont
+    \centering
+
+    \begin{minipage}{\linewidth}
+    \centering
+    \includegraphics[scale=0.3]{images/box-icon.png}
+    \end{minipage}
+
+    \vskip 1cm
+    
+    {\huge\@title\par}%
+    \hrulefill\par
+    \vskip 0.25cm
+    {\LARGE Exercises}
+    \vskip 0.75cm
+
+    {\LARGE\raggedleft Manual by \@author\par}%
+  \end{center}%
+  \vfill
+  \null
+  \clearpage
+  }
+\makeatother
+\author{Themistoklis Diamantopoulos}
+\title{Deep Learning with Python Keras}
+\date{}
+
+\makepagestyle{headings}
+\makeevenhead{headings}{\thepage}{}{DEEP LEARNING WITH PYTHON KERAS}
+\makeoddhead{headings}{DEEP LEARNING WITH PYTHON KERAS}{}{\thepage}
+
+\begin{document}
+
+\maketitle
+
+\frontmatter
+
+\null
+\thispagestyle{empty}%
+\vfill
+
+\begin{flushleft}
+\textit{Deep Learning with Python Keras}
+
+Notes for a tutorial compiled by Themistoklis Diamantopoulos
+
+\vskip 0.2cm
+
+For more information check website:
+
+\url{https://thdiaman.github.io/deeplearning/}
+
+or check the following QR code:
+
+\vskip 0.2cm
+
+\XeTeXLinkBox{\qrcode[height=25mm]{https://thdiaman.github.io/deeplearning/}}
+
+\bigskip
+
+THE MATERIAL USED IN THIS TUTORIAL IS GATHERED FROM A SET OF DIFFERENT SOURCES THAT ARE REFERRED IN THE REFERENCES SECTION
+
+\vskip 0.2cm
+ALL RIGHTS RESERVED TO THE ORIGINAL OWNERS
+
+\vskip 0.2cm
+THIS DOCUMENT IS ONLY TO SERVE AS A MANUAL FOR THE CONTENT OF THE TUTORIAL
+
+\vskip 0.2cm
+COPYRIGHT 2018
+
+\end{flushleft}
+
+
+
+\mainmatter
+
+\chapter{Image Recognition}
+
+\section{Solution using Convolutional Neural Network}
+\subsection{Training}
+\lstinputlisting{../ImageRecognitionMultiClass/training.py}
+
+\subsection{Testing}
+\lstinputlisting{../ImageRecognitionMultiClass/testing.py}
+
+\section{Solution using Bottleneck Features on VGG16}
+\subsection{Training}
+\lstinputlisting{../ImageRecognitionMultiClass/training_vgg16.py}
+
+\subsection{Testing}
+\lstinputlisting{../ImageRecognitionMultiClass/testing_vgg16.py}
+
+\chapter{Text Classification}
+\section{Solution using Fully Connected Neural Network}
+\subsection{Training}
+\lstinputlisting{../TextClassificationMultiClass/training.py}
+
+\subsection{Testing}
+\lstinputlisting{../TextClassificationMultiClass/testing.py}
+
+\section{Solution using Convolutional Neural Network}
+\subsection{Training}
+\lstinputlisting{../TextClassificationMultiClass/training_cnn.py}
+
+\subsection{Testing}
+\lstinputlisting{../TextClassificationMultiClass/testing_cnn_lstm.py}
+
+\section{Solution using Recurrent Neural Network}
+\subsection{Training}
+\lstinputlisting{../TextClassificationMultiClass/training_lstm.py}
+
+\subsection{Testing}
+Same as Testing for Solution using Convolutional Neural Network
+
+\backmatter
+
+\renewcommand*{\printchaptertitle}[1]{\chaptitlefont#1}
+\chapter*{References}
+This chapter contains any references used to create this tutorial.
+In specific, it contains sources for the different source
+code parts of each section/example of this tutorial.
+
+\section{Image Recognition}
+\begin{itemize}
+\item Building powerful image classification models using very little data: \href{https://blog.keras.io/building-powerful-image-classification-models-using-very-little-data.html}{https://blog.keras.io/buildi ng-powerful-image-classification-models-using-very-little-data.html}
+\item Object classification using CNN \& VGG16 Model (Keras and Tensorflow): \href{https://www.slideshare.net/LalitJain29/object-classification-using-cnn-vgg16-model-keras-and-tensorflow}{https://www.slidesh are.net/LalitJain29/object-classification-using-cnn-vgg16-model-keras-and-tensorflow}
+\end{itemize}
+
+\section{Text Classification}
+\begin{itemize}
+\item Classifying Tweets with Keras and TensorFlow: \href{https://vgpena.github.io/classifying-tweets-with-keras-and-tensorflow/}{https://vgpena.github.io/classifying-tweets-with-keras-and-tensorflow/}
+\item Practical Neural Networks with Keras: Classifying Yelp Reviews: \href{http://www.developintelligence.com/blog/2017/06/practical-neural-networks-keras-classifying-yelp-reviews/}{http://www.developintelligen ce.com/blog/2017/06/practical-neural-networks-keras-classifying-yelp-reviews/}
+\end{itemize}
+
+
+
+\end{document}
