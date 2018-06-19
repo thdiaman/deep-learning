@@ -1,0 +1,15 @@
+---
+title: Quiz
+---
+
+# Quiz
+Time to find out what you have learned by this tutorial!
+
+Click <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfWZdicrkVOTU53ePxT74huBDIXRfE_ob2m5vdsxu5JTesdKg/viewform?usp=sf_link">here</a>
+to start the quiz.
+
+<!--iframe 
+		src="https://docs.google.com/forms/d/e/1FAIpQLSfWZdicrkVOTU53ePxT74huBDIXRfE_ob2m5vdsxu5JTesdKg/viewform?embedded=true"
+		width="700" height="5900" frameborder="0" marginheight="0" marginwidth="0">
+	Loading...
+</iframe-->
