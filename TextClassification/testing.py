@@ -10,7 +10,7 @@ model = load_model('model.h5')
 
 tokenizer = Tokenizer(num_words=3000)
 while 1:
-    text = input('Input a sentence to evaluate its sentiment, or press enter to quit:')
+    text = input('Input a sentence to evaluate its sentiment, or press enter to quit: ')
     if len(text) == 0:
         break
     # Make the prediction

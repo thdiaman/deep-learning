@@ -8,7 +8,7 @@ from keras.preprocessing.sequence import pad_sequences
 from keras.layers import Dense, Embedding, Conv1D, GlobalMaxPooling1D
 
 # Load input data
-training = np.genfromtxt('15000tweets.csv', delimiter=',', skip_header=1, usecols=(1, 3), dtype=None)
+training = np.genfromtxt('15000tweets.csv', delimiter=',', skip_header=1, usecols=(1, 3), dtype=None, encoding='utf-8')
 
 # Get tweets and sentiments (0 or 1)
 train_x = [str(x[1]) for x in training]
