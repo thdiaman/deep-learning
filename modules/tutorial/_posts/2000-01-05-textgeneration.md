@@ -23,6 +23,6 @@ for a presentation on this problem.
 - <a target="_blank" href="{{site.dataurl}}/TextGeneration/training_rnn.py">Training a Recurrent Neural Network</a>
 - <a target="_blank" href="{{site.dataurl}}/TextGeneration/rnn_model.h5">Trained Model</a>
 - <a target="_blank" href="{{site.dataurl}}/TextGeneration/dictionary.json">Vocabulary</a> and
-<a target="_blank" href="{{site.dataurl}}/TextGeneration/length.json">lengths</a>
+<a target="_blank" href="{{site.dataurl}}/TextGeneration/lengths.json">lengths</a>
 - <a target="_blank" href="{{site.dataurl}}/TextGeneration/testing_rnn.py">Testing the Model</a>
 
