@@ -5,9 +5,9 @@ published: true
 
 ## Deep Learning with Keras
 
-This is a website for Deep Learning using [Keras](https://keras.io/).
+This is a website for Deep Learning using <a target="_blank" href="https://keras.io/">Keras</a>.
 
-Deep Learning can be a poweful asset for many of the problems faced by
+Deep Learning can be a powerful asset for many of the problems faced by
 current research and life in general. And Keras is probably the most comprehensive
 library for the newcomer in this exciting field.
 
