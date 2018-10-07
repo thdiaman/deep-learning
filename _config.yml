@@ -1,6 +1,6 @@
 # basic configuration
 baseurl: 'https://thdiaman.github.io/deeplearning'
-dataurl: 'https://raw.githubusercontent.com/thdiaman/deep-learning/master'
+dataurl: 'https://raw.githubusercontent.com/thdiaman/deeplearning/master'
 markdown: kramdown
 permalink: /:categories/:title/
 
