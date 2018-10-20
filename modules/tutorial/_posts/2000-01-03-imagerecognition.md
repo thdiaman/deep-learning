@@ -41,6 +41,6 @@ Try this before you check the solution
 <a target="_blank" href="{{site.dataurl}}/ImageRecognitionMultiClass/testing.py">testing</a>)
 and the VGG16 solution
 (<a target="_blank" href="{{site.dataurl}}/ImageRecognitionMultiClass/training_vgg16.py">training</a>,
-<a target="_blank" href="{{site.dataurl}}/ImageRecognitionMultiClass/bottleneck_features.py">bottleneck features</a>,
+<a target="_blank" href="{{site.dataurl}}/ImageRecognitionMultiClass/bottleneck_features.zip">bottleneck features</a>,
 <a target="_blank" href="{{site.dataurl}}/ImageRecognitionMultiClass/bottleneck_fc_model.h5">trained model</a>, and
 <a target="_blank" href="{{site.dataurl}}/ImageRecognitionMultiClass/testing_vgg16.py">testing</a>).
