@@ -31,7 +31,7 @@ for a presentation on this problem.
 
 ### Solution using Recurrent Neural Network (LSTM)
 
-- <a target="_blank" href="{{site.dataurl}}/TextClassification/training.py">Training a Recurrent Neural Network</a>
+- <a target="_blank" href="{{site.dataurl}}/TextClassification/training_lstm.py">Training a Recurrent Neural Network</a>
 - <a target="_blank" href="{{site.dataurl}}/TextClassification/lstm_model.h5">Trained Model</a>
 - <a target="_blank" href="{{site.dataurl}}/TextClassification/dictionary.json">Vocabulary</a>
 - <a target="_blank" href="{{site.dataurl}}/TextClassification/testing_cnn_lstm.py">Testing the Model</a>
