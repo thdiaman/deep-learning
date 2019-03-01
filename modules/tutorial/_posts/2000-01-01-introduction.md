@@ -9,6 +9,6 @@ before starting this tutorial.
 
 Check the presentation below for an introduction to Machine Learning and Deep Learning with Keras.
 
-\Click <a target="_blank" href="{{site.baseurl}}/presentations/DeepLearningKeras.pdf">here</a>
+Click <a target="_blank" href="{{site.baseurl}}/presentations/DeepLearningKeras.pdf">here</a>
 to download the presentation.
 
