@@ -38,7 +38,10 @@ class Catch(object):
         state = self.state[0]
         canvas = np.zeros(im_size)
         canvas[state[0], state[1]] = 1  # draw fruit
-        canvas[-1, state[2]-1:state[2] + 2] = 1  # draw basket
+        try:
+            canvas[-1, state[2]-1:state[2] + 2] = 1  # draw basket
+        except:
+            canvas[-1, state[2][0]-1:state[2][0] + 2] = 1  # draw basket
         return canvas
         
     def _get_reward(self):
