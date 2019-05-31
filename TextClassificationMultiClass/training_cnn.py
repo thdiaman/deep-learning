@@ -33,7 +33,7 @@ if not os.path.exists('cnn_model.h5'):
     # Create a neural network with 3 dense layers
     model = Sequential()
     model.add(Embedding(3000, 64, input_length=300))
-    model.add(Conv1D(filters=100, kernel_size=2, padding='valid', activation='relu', strides=1))
+    model.add(Conv1D(100, 2, activation='relu'))
     model.add(GlobalMaxPooling1D())
     model.add(Dense(256, activation='relu'))
     model.add(Dense(5, activation='sigmoid'))
